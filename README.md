@@ -1,6 +1,6 @@
-# @minisss/localstorage
+# @minisss/localStorage
 
-@minisss/localstorage 是一个专为浏览器环境设计的轻量级本地存储库，旨在简化对 localStorage 的操作，同时提供丰富的功能和更好的开发体验。
+@minisss/localStorage 是一个专为浏览器环境设计的轻量级本地存储库，旨在简化对 localStorage 的操作，同时提供丰富的功能和更好的开发体验。
 
 - 🤡 支持广泛浏览器
 - ✅ 自定义前缀
@@ -47,7 +47,7 @@ console.log(MLS.get("key"));
 
 ```js
 // UMD
-<script src="https://unpkg.com/@minisss/localstorage@0.0.1-alpha.1"></script>;
+<script src="https://unpkg.com/@minisss/localStorage@0.0.1-alpha.1"></script>;
 <script>console.log("MLS 包对象: ", MLS) MLS.set('key', 'val') console.log(MLS.get('key')) console.log(MLS.has('key'))</script>;
 ```
 
@@ -55,7 +55,7 @@ console.log(MLS.get("key"));
 
 ```js
 <script type="module">
-  import MLS from "https://unpkg.com/@minisss/localstorage@0.0.1-alpha.1/dist/index.esm.js"; console.log("MLS 包对象: ", MLS) MLS.set('key', 'val') console.log(MLS.get('key'))
+  import MLS from "https://unpkg.com/@minisss/localStorage@0.0.1-alpha.1/dist/index.esm.js"; console.log("MLS 包对象: ", MLS) MLS.set('key', 'val') console.log(MLS.get('key'))
   console.log(MLS.del('key')) console.log(MLS.has('key'))
 </script>
 ```

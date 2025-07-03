@@ -13,7 +13,7 @@ import { visualizer } from "rollup-plugin-visualizer"
 export default {
   input: "src/index.ts",
   output: [
-    { format: "umd", file: "out/index.umd.js", name: "MSCookie" },
+    { format: "umd", file: "out/index.umd.js", name: "MSLocalStorage" },
     { format: "esm", file: "out/index.esm.js" },
     { format: "cjs", file: "out/index.cjs.js" },
   ],

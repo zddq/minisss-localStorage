@@ -3,21 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@minisss/localstorage MSLocalstorage</title>
+    <title>@minisss/localStorage MSLocalStorage</title>
   </head>
   <body>
     <!-- script UMD 引入方式 -->
     <script src="../out/index.umd.js"></script>
     <script>
-      const mls = MLS.create({ prefix: "XX_DEV_680", isUseAes: true });
-      console.log(mls);
-      console.log(mls.set("key"));
-
-      // console.log(mls.set("key", { a: 1, b: "2", c: [1, 2, 3] }, { maxAge: 10 * 60 }));
+      const mls = MSLocalStorage.create({ prefix: "XX_DEV_680", isUseAes: true });
+      console.log("实例对象", mls);
       console.log(mls.has("key"));
+      console.log(mls.set("key", { a: 1, b: "2", c: [1, 2, 3] }, { maxAge: 5 }));
       console.log(mls.get("key"));
-      // console.log(mls.del("key"));
-      // console.log(mls.has("key"));
+      const TID = setInterval(() => {
+        const tmpVal = mls.get("key");
+        console.log("TID", TID, "tmpVal", tmpVal);
+        !tmpVal && clearInterval(TID);
+      }, 1000);
     </script>
   </body>
 </html>

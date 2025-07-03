@@ -1,7 +1,8 @@
 /// <reference path="./global.d.ts" />
 
 /**
- * 浏览器 localStorage 管理
+ * MSLocalStorage本地存储封装
+ * @description 推荐使用 MSLocalStorage.create 方法创建实例, 便于后期统一维护管理
  */
-declare const MiniLocalStore: Static<IMiniLocalStorage>;
-export default MiniLocalStore;
+declare const MSLocalStorage: IMSLocalStorageStatic<IMSLocalStorageData>;
+export default MSLocalStorage;

@@ -1,36 +1,25 @@
-import { getFullKeyStr, isSupport } from "./tool";
 import del from "./local-storage-del";
+import { getFullKeyStr, isSupport } from "./tool";
 
 /**
  * 获取指定 key 值
  * @param {string} key 键
- * @param {Config} config 配置
+ * @param {IMSLocalStorageConfig} config 配置
  * @returns {any} any
  */
-export default function (key: string, config?: Config) {
-  if (!isSupport()) {
-    throw new Error("@minisss/localStorage is muse run in browser");
-  }
+export default function (key: string, config?: IMSLocalStorageConfig) {
+  if (!isSupport()) throw new Error("@minisss/localStorage is muse run in browser");
 
   const tmpVal = localStorage.getItem(getFullKeyStr(key, config));
+  if (!tmpVal) return tmpVal;
+
   try {
-    const res: Store | null = JSON.parse(tmpVal || null);
-    if (res === null) return null;
-
-    // 数据有存储日期效性判断
-    if (res.maxAge && res.maxAge <= Date.now()) {
-      del(key, config);
-      return null;
-    }
-
-    // 数据类型判断
-    if (res.data === null) {
-      return null;
-    }
-
+    const res: IMSLocalStorageStore = JSON.parse(tmpVal);
+    if (!res) return null;
+    // 校验数据时间有效性
+    if (res.maxAge && res.maxAge <= Date.now()) return del(key, config);
     return res.data;
   } catch (error) {
-    console.error(error);
     return tmpVal;
   }
 }

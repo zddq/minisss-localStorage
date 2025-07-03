@@ -4,9 +4,11 @@
  * @param config 配置项
  * @returns string
  */
-export function getFullKeyStr(key: string, config: Config = {}) {
-  const prefixStr = String(config.prefix || "").trim();
+export function getFullKeyStr(key: string, config: IMSLocalStorageConfig = {}) {
   const keyStr = String(key).trim();
+  if (!config.prefix) return keyStr;
+
+  const prefixStr = String(config.prefix || "").trim();
   return prefixStr ? `${prefixStr}_${keyStr}` : `${keyStr}`;
 }
 
@@ -16,7 +18,6 @@ export function getFullKeyStr(key: string, config: Config = {}) {
  */
 export function isSupport() {
   try {
-    if (typeof window === "undefined" || typeof localStorage === "undefined") return false;
     return !!window.localStorage;
   } catch (error) {
     return false;

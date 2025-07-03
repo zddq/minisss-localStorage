@@ -6,7 +6,7 @@
 - ✅ 自定义前缀
 - ✅ 数据过期机制
 - ✅ 支持JSON数据格式
-- ✅ 内置 TS 类型提示(全局定义 IMiniLocalStorage 定义即可)
+- ✅ 内置 TS 类型提示(全局定义 IMSLocalStorageData 定义即可)
 - ✅ 支持 ESM CJS UMD
 
 ## 安装方式

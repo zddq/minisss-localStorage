@@ -88,5 +88,5 @@ interface IMSLocalStorageStatic<O> extends IMSLocalStorageInstance<O> {
   create<OO extends O>(config?: Partial<IMSLocalStorageConfig>): IMSLocalStorageInstance<OO>;
 }
 
-/** @minisss/localStorage 本地对象 TS 类型提示定义 */
+/** @minisss/localstorage 本地对象 TS 类型提示定义 */
 interface IMSLocalStorageData {}

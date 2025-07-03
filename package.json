@@ -1,11 +1,11 @@
 {
-  "name": "@minisss/localStorage",
+  "name": "@minisss/localstorage",
   "description": "A Window localStorage Manager Lib",
   "version": "1.0.0",
   "author": "minisss",
   "license": "MIT",
   "keywords": [
-    "@minisss/localStorage",
+    "@minisss/localstorage",
     "MSLocalStorage",
     "localstorage",
     "minisss",

@@ -7,7 +7,7 @@ import { getFullKeyStr, isSupport } from "./tool";
  * @returns {boolean} boolean
  */
 export default function (key: string, config: IMSLocalStorageConfig = {}) {
-  if (!isSupport()) throw new Error("@minisss/localStorage is muse run in browser");
+  if (!isSupport()) throw new Error("@minisss/localstorage is muse run in browser");
 
   const len = localStorage.length;
   const keys = [];

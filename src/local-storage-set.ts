@@ -5,7 +5,7 @@ import { getFullKeyStr, isSupport } from "./tool";
  * @returns void
  */
 export default function (key: string, data: any, config: IMSLocalStorageConfig = {}) {
-  if (!isSupport()) throw new Error("@minisss/localStorage is muse run in browser");
+  if (!isSupport()) throw new Error("@minisss/localstorage is muse run in browser");
 
   const { maxAge, expires } = config ?? {};
 

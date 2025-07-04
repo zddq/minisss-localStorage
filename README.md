@@ -84,8 +84,8 @@ console.log(MLS.get("key"));
 
 | 名称    | 描述                         | 数据类型 | 默认值    |
 | ------- | ---------------------------- | -------- | --------- |
-| expires | 过期时间(maxAge会覆盖此参数) | Date     | undefined |
 | maxAge  | 过期时间，单位为秒           | number   | undefined |
+| expires | 过期时间(maxAge会覆盖此参数) | Date     | undefined |
 | prefix  | 自定义 key 前缀              | string   | ''        |
 
 ## 覆写 IMSLocalStorageData 类型接口y已支持 TS 类型提示(可选)

@@ -6,5 +6,5 @@ import { isSupport } from "./tool";
 export default function () {
   if (!isSupport()) throw new Error("@minisss/localstorage is muse run in browser");
 
-  localStorage.clear();
+  return localStorage.clear();
 }

@@ -1,12 +1,12 @@
 import PKG from "../package.json";
 
-import key from "./local-storage-key";
-import get from "./local-storage-get";
-import set from "./local-storage-set";
-import del from "./local-storage-del";
-import clear from "./local-storage-clear";
-import has from "./local-storage-has";
-import len from "./local-storage-len";
+import key from "./ls-key";
+import get from "./ls-get";
+import set from "./ls-set";
+import del from "./ls-del";
+import clear from "./ls-clear";
+import has from "./ls-has";
+import len from "./ls-len";
 
 import { isSupport } from "./tool";
 

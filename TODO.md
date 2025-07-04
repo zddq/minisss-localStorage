@@ -1,4 +1,4 @@
-# mini-local-storage
+# @minisss/localstorage
 
 ## 一期功能
 

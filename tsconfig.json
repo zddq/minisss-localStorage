@@ -2,8 +2,8 @@
   "exclude": ["node_modules", "out"],
   "include": ["src", "types", "test"],
   "compilerOptions": {
-    "rootDir": ".",
-    "baseUrl": ".",
+    "rootDir": "",
+    "baseUrl": "",
 
     // 模块配置
     "moduleResolution": "node",

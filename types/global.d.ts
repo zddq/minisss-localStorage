@@ -9,16 +9,16 @@ interface IMSLocalStorageStore {
 /** 配置 */
 interface IMSLocalStorageConfig {
   /**
-   * 失效日期(Date)
-   * @default null
-   */
-  expires?: Date;
-  /**
    * 最大存活时间(秒)
    * @description 当 maxAge 大于 0 时，expires 值会被忽略
    * @default 0
    */
   maxAge?: number;
+  /**
+   * 失效日期(Date)
+   * @default null
+   */
+  expires?: Date;
   /**
    * 自定义前缀
    * @description 建议使用 create 方法创建实例时 传入自定义前缀(避免单独使用-不方便后期维护)

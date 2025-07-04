@@ -1,4 +1,4 @@
-import del from "./local-storage-del";
+import del from "./ls-del";
 import { getFullKeyStr, isSupport } from "./tool";
 
 /**

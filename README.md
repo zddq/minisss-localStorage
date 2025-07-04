@@ -2,12 +2,12 @@
 
 @minisss/localstorage 是一个专为浏览器环境设计的轻量级本地存储库，旨在简化对 localStorage 的操作，同时提供丰富的功能和更好的开发体验。
 
-- 🤡 支持广泛浏览器
+- ✅ 支持对象存储
+- ✅ 支持过期机制
 - ✅ 自定义前缀
-- ✅ 数据过期机制
-- ✅ 支持JSON数据格式
-- ✅ 内置 TS 类型提示(全局定义 IMSLocalStorageData 定义即可)
+- ✅ 友好的 TS 类型提示(全局定义 IMSLocalStorageData 定义即可)
 - ✅ 支持 ESM CJS UMD
+- 🤡 支持广泛浏览器
 
 ## 安装方式
 
@@ -45,17 +45,22 @@ console.log(MLS.get("key"));
 
 ### UMD xxx.html 普通 script 直接导入 -> 访问全局变量 MLS
 
-```js
+```html
 // UMD
-<script src="https://unpkg.com/@minisss/localstorage@1.0.0"></script>;
-<script>console.log("MLS 包对象: ", MLS) MLS.set('key', 'val') console.log(MLS.get('key')) console.log(MLS.has('key'))</script>;
+<script src="https://unpkg.com/@minisss/localstorage@1.0.5"></script>
+<script>
+  console.log("MLS 包对象: ", MLS) MLS.set('key', 'val');
+  console.log(MLS.get('key')) console.log(MLS.has('key'));
+</script>
 ```
 
 ### UMD xxx.html script type module 模块化内部引入方式
 
-```js
+```html
 <script type="module">
-  import MLS from "https://unpkg.com/@minisss/localstorage@1.0.0/out/index.esm.js"; console.log("MLS 包对象: ", MLS) MLS.set('key', 'val') console.log(MLS.get('key')) console.log(MLS.del('key'));
+  import MLS from "https://unpkg.com/@minisss/localstorage@1.0.5/out/index.esm.js";
+  console.log("MLS 包对象: ", MLS) MLS.set('key', 'val');
+  console.log(MLS.get('key')) console.log(MLS.del('key'));
   console.log(MLS.has('key'));
 </script>
 ```

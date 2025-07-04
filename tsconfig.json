@@ -1,6 +1,6 @@
 {
   "exclude": ["node_modules", "out"],
-  "include": ["src", "types"],
+  "include": ["src", "types", "test"],
   "compilerOptions": {
     "rootDir": ".",
     "baseUrl": ".",
